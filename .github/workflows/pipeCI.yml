@@ -1,0 +1,32 @@
+name: CI pipeline
+run-name: ${{ github.actor }} lets do this 
+
+on:
+    push:
+        branches:
+            - develop
+
+jobs:
+    build:
+        runs-on: ubunto-latest
+
+        steps:
+            - name: print a message
+              run: echo "Hello, world!"
+            
+            - name: checkout code
+              uses: actions/checkout@v2
+
+            - name: setup Node.js
+              uses: actions/setupp-node@v2
+              with:
+                node-version: '20'
+            
+            - name: install node modules
+              run: npm install
+            
+            - name: run test
+              run: npm test
+
+            - name: run ESLint
+              run: npm run lint
