@@ -3,7 +3,7 @@ const path = require('path');
 const index = express();
 
 index.get('/', (req,res) => {
-    res.sendFile(path.dirname( 'views', 'index.html'));
-});
+    res.sendFile(path.join(__dirname, 'views', 'index.html'));
+})
 
 module.exports = index;
