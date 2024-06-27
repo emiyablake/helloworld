@@ -10,6 +10,14 @@ describe('GET /', () => {
     });
 });
 
+describe('GET /contato', () => {
+  it('sould respond with the index.html file', async () => {
+      const response = await request(index).get('/');
+      expect(response.status).toBe(200);
+      
+  });
+});
+
 /*
 const request = require('supertest');
 const path = require('path');

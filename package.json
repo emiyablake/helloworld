@@ -11,9 +11,9 @@
   "author": "Mara Júlia Ávila, Gabriel Ratão",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.19.2"
   },
-  
   "devDependencies": {
     "@eslint/js": "^9.5.0",
     "eslint": "^9.5.0",
@@ -22,4 +22,3 @@
     "supertest": "^7.0.0"
   }
 }
-  
