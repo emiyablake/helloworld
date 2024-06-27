@@ -2,7 +2,7 @@
   "name": "helloworld",
   "version": "1.0.0",
   "description": "olá mundo da integração.",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "jest --coverage",
     "lint": "eslint src/*.js"
@@ -13,6 +13,13 @@
   "dependencies": {
     "express": "^4.19.2"
   },
+  "eslintConfig": {
+    "env": {
+    "node": true,
+    "es2021": true
+  },
+  "extends": "eslint:recommended"
+  },
   "devDependencies": {
     "@eslint/js": "^9.5.0",
     "eslint": "^9.5.0",
@@ -21,3 +28,4 @@
     "supertest": "^7.0.0"
   }
 }
+  
