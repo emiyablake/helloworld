@@ -17,3 +17,4 @@ Incluindo a criação e implantação de uma aplicação simples em Node.js em u
 - .eslintrc.js: Configuração do ESLint
 
 ### Configuração das branches
+[Como configurar](./configbranches.md)
