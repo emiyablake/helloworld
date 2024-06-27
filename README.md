@@ -1,27 +1,19 @@
 # Helloworld
+Este projeto foi desenvolvido com o intuito de fixar os aprendizados em aula sobre os processos de DevOps, como integração contínua (CI) e entrega contínua (CD) usando GitHub Actions. 
+Incluindo a criação e implantação de uma aplicação simples em Node.js em uma instância EC2 da AWS.
 
-## Branches
+### Funcionalidades
+- Aplicação simples em Node.js
+- Testes automatizados com Jest e Supertest
+- Verificação de estilo de código com ESLint
+- CI/CD configurado com GitHub Actions
+- Implantação automática em uma instância EC2 da AWS
 
-### Main Branch
-- **Branch:** `main`
-- **Descrição:** Arquivos prontos para Produção (deploys e releases finais).
+### Estrutura do Projeto
+- src/: Código-fonte da aplicação
+- tests/: Testes automatizados
+- .github/workflows/: Arquivos de configuração do GitHub Actions
+- package.json: Dependências e scripts do npm
+- .eslintrc.js: Configuração do ESLint
 
-### Develop Branch
-- **Branch:** `develop`
-- **Descrição:** Branch para desenvolvimento; merge das features concluídas.
-
-### Feature Branches
-- **Branches:** `feature/*`
-- **Descrição:** Novas funcionalidades; saem da `develop` e voltam para `develop`.
-- **Exemplo:** `feature/nome-da-feature`
-
-### Bugfix Branches
-- **Branches:** `bugfix/*`
-- **Descrição:** Correção de bugs; saem da `develop` e voltam para `develop`.
-- **Exemplo:** `bugfix/nome-do-bug`
-
-## Como Contribuir
-
-1. **Clonar o Repositório**
-   ```sh
-   git clone https://github.com/seu-usuario/helloworld.git
+### Configuração das branches
