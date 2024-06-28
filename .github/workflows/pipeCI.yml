@@ -4,7 +4,7 @@ run-name: ${{ github.actor }} lets do this
 on:
     push:
         branches:
-            - [ "develop" ]
+            - "develop"
 
 jobs:
     build:
@@ -36,7 +36,7 @@ jobs:
     delivery:
       runs-on: ubuntu-latest
       needs: build
-      if: success()
+      if: ${{ success() }}
       steps:
         - uses: actions/checkout@v4
           with:
@@ -51,6 +51,5 @@ jobs:
           run: |
             git fetch
             git checkout main
-            git pull
             git merge develop --allow-unrelated-histories --no-edit
             git push origin main
