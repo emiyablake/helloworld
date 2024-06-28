@@ -1,0 +1,25 @@
+{
+  "name": "helloworld",
+  "version": "1.0.0",
+  "description": "olá mundo da integração.",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest --coverage",
+    "lint": "eslint src/*.js"
+  },
+  "keywords": [],
+  "author": "Mara Júlia Ávila, Gabriel Ratão",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  
+  "devDependencies": {
+    "@eslint/js": "^9.5.0",
+    "eslint": "^9.5.0",
+    "globals": "^15.6.0",
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  }
+}
+  
