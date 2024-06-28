@@ -32,3 +32,25 @@ jobs:
 
             - name: run ESLint
               run: npm run lint
+
+    delivery:
+      runs-on: ubunto-latest
+      needs: build
+      if: ${{ success() }}
+      steps:
+        - uses: actions/checkout@v4
+          with:
+            token: ${{ secrets.ACCESS_TOKEN}}
+            
+        - name: set up Git
+          run: |
+            git config --global user.email "actions@github.com"
+            git config --global user.name "Github Actions"
+
+        - name: merge to main
+          run: |
+            git fetch
+            git checkout main
+            git merge fevelop --allow-unrelated-histories --no-edit
+            git push origin main
+          
