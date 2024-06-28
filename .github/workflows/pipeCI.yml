@@ -51,5 +51,5 @@ jobs:
           run: |
             git fetch
             git checkout main
-            git merge develop --allow-unrelated-histories --no-edit
+            git merge --no-ff develop --no-edit
             git push origin main
