@@ -18,6 +18,25 @@
     <main>
         <h1>Deploying from github!</h1>
         <p>O fluxo continuo está implementado, depois de muito trabalho...</p>
+        <button id="fetchButton">contato</button>
+        <div id="contatos"><!-- resposta da api aqui --></div>
+        <script>
+            document.getElementById('fetchButton').addEventListener('click', () => {
+                fetch('/contato')
+                    .then(response => response.json())
+                    .then(data => {
+                        const contatosDiv = document.getElementById('contatos');
+                        contatosDiv.innerHTML = ''; // Limpa os contatos anteriores, se houver
+                        
+                        data["criadores dessa pagina"].forEach(contato => {
+                            const contatoDiv = document.createElement('div');
+                            contatoDiv.innerHTML = `<p>Nome: ${contato.nome}</p><p>Idade: ${contato.idade}</p>`;
+                            contatosDiv.appendChild(contatoDiv);
+                        });
+                    })
+                    .catch(error => console.error('Erro:', error));
+            });
+        </script>
     </main>
 </body>
 </html>
